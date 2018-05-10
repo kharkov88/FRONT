@@ -1,0 +1,12 @@
+#content-login {
+	padding-top: 50%;
+	text-align: center;
+}
+#chatroom > div{
+	height: 300px;
+	border: 1px solid red;
+}
+#content-login form {
+	width: 50%;
+	margin: 0 auto;
+}
