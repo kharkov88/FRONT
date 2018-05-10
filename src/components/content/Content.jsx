@@ -7,8 +7,8 @@ import { Login } from './Login'
 import { Chatroom } from './Chatroom'
 
 export const Content = () => (
-	<Row className="show-grid">
-		<Route exact path="/" component={Login}/>
-		<Route exact path="/chat" component={Chatroom}/>
-	</Row>
+  <Row className='show-grid'>
+    <Route exact path='/' component={Login} />
+    <Route exact path='/chat' component={Chatroom} />
+  </Row>
 )

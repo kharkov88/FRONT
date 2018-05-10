@@ -1,20 +1,20 @@
 import React, { Component } from 'react'
 import './App.css'
 
-//components
+// components
 import { Grid } from 'react-bootstrap'
 import { Header } from './components/header'
 import { Content } from './components/content'
 
 class App extends Component {
-  render() {
+  render () {
     return (
       <Grid>
-        <Header/>
-        <Content/>
+        <Header />
+        <Content />
       </Grid>
     )
   }
 }
 
-export default App;
+export default App

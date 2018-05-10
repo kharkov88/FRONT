@@ -1,47 +1,47 @@
 import React from 'react'
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 import { Button, Glyphicon, Modal, Popover, Tooltip, OverlayTrigger } from 'react-bootstrap'
 
 /*
 export const About = () => (
 	<Link to="/about">
-		<Glyphicon glyph="align-justify" /> 
+		<Glyphicon glyph="align-justify" />
 	</Link>
 )
 */
 export class About extends React.Component {
-  constructor(props, context) {
-    super(props, context);
+  constructor (props, context) {
+    super(props, context)
 
-    this.handleShow = this.handleShow.bind(this);
-    this.handleClose = this.handleClose.bind(this);
+    this.handleShow = this.handleShow.bind(this)
+    this.handleClose = this.handleClose.bind(this)
 
     this.state = {
       show: false
-    };
+    }
   }
 
-  handleClose() {
-    this.setState({ show: false });
+  handleClose () {
+    this.setState({ show: false })
   }
 
-  handleShow() {
-    this.setState({ show: true });
+  handleShow () {
+    this.setState({ show: true })
   }
 
-  render() {
+  render () {
     const popover = (
-      <Popover id="modal-popover" title="popover">
+      <Popover id='modal-popover' title='popover'>
         very popover. such engagement
       </Popover>
-    );
-    const tooltip = <Tooltip id="modal-tooltip">wow.</Tooltip>;
+    )
+    const tooltip = <Tooltip id='modal-tooltip'>wow.</Tooltip>
 
     return (
       <div>
-		<Link to="/about">
-			<Glyphicon glyph="align-justify" onClick={this.handleShow}/> 
-		</Link>
+        <Link to='/about'>
+          <Glyphicon glyph='align-justify' onClick={this.handleShow} />
+        </Link>
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>
@@ -56,7 +56,7 @@ export class About extends React.Component {
             <p>
               there is a{' '}
               <OverlayTrigger overlay={popover}>
-                <a href="#popover">popover</a>
+                <a href='#popover'>popover</a>
               </OverlayTrigger>{' '}
               here
             </p>
@@ -65,7 +65,7 @@ export class About extends React.Component {
             <p>
               there is a{' '}
               <OverlayTrigger overlay={tooltip}>
-                <a href="#tooltip">tooltip</a>
+                <a href='#tooltip'>tooltip</a>
               </OverlayTrigger>{' '}
               here
             </p>
@@ -124,6 +124,6 @@ export class About extends React.Component {
           </Modal.Footer>
         </Modal>
       </div>
-    );
+    )
   }
 }

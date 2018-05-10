@@ -8,24 +8,20 @@ import { Row, Col } from 'react-bootstrap'
 
 export let Header = () => (
 
-    <Row className="show-grid" id="header">
-      <Col  xs={12} sm={4}>
-        <Col  xs={12} sm={4} md={4}>
-          <Home/>
-        </Col>
-        <Col  xs={12} sm={4} md={4}>
-          <Chat/>
-        </Col>
-        <Col  xs={12} sm={4} md={4}>
-          <About/>
-        </Col>
+  <Row className='show-grid' id='header'>
+    <Col xs={12} sm={4}>
+      <Col xs={12} sm={4} md={4}>
+        <Home />
       </Col>
-      <Col  xs={12} sm={4}>
-        
+      <Col xs={12} sm={4} md={4}>
+        <Chat />
       </Col>
-      <Col  xs={12} sm={4}>
-        
+      <Col xs={12} sm={4} md={4}>
+        <About />
       </Col>
-    </Row>
+    </Col>
+    <Col xs={12} sm={4} />
+    <Col xs={12} sm={4} />
+  </Row>
 
 )
