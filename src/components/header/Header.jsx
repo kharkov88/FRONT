@@ -4,7 +4,7 @@ import React from 'react'
 import Home from './Home'
 import {Search} from './Search'
 import {About} from './About'
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col} from 'react-bootstrap'
 
 export let Header = ({logined, user}) => (
   <Row className='show-grid' id='header'>
@@ -20,6 +20,6 @@ export let Header = ({logined, user}) => (
       </Col>
     </Col>
     <Col xs={12} sm={4} />
-    <Col xs={12} sm={4} id="header-username">{user}</Col>
+    <Col xs={12} sm={4} id='header-username'>{user}</Col>
   </Row>
 )

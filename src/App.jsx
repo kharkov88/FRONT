@@ -4,14 +4,14 @@ import './App.css'
 import React, { Component } from 'react'
 import { Grid } from 'react-bootstrap'
 import { Header } from './components/header'
-import { Content } from './components/content'
+import { Content} from './components/content'
 
 class App extends Component {
   componentDidMount () {
     let {user, logined} = window.localStorage
     this.setState({
-    	user: user,
-    	logined: logined
+      user: user,
+      logined: logined
     })
   }
 

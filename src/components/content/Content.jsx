@@ -10,12 +10,12 @@ import { User } from './User'
 export const Content = ({logined, changeLoginState}) => (
   <Row className='show-grid'>
     <Route exact path='/' render={
-    	props => <Login logined={logined} changeLoginState={changeLoginState} />
+      props => <Login logined={logined} changeLoginState={changeLoginState} />
     } />
     <Route path='/search' component={Search} />
-    <Route path='/people/:id' component={User}/>
+    <Route path='/people/:id' component={User} />
   </Row>
 )
 const Data = () => (
-	<p>User's data</p>
-	)
+  <p>User's data</p>
+)
