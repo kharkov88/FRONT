@@ -6,22 +6,20 @@ import {Chat} from './Chat'
 import {About} from './About'
 import { Row, Col } from 'react-bootstrap'
 
-export let Header = () => (
-
+export let Header = ({logined, user}) => (
   <Row className='show-grid' id='header'>
     <Col xs={12} sm={4}>
       <Col xs={12} sm={4} md={4}>
         <Home />
       </Col>
       <Col xs={12} sm={4} md={4}>
-        <Chat />
+        <Chat logined={logined} />
       </Col>
       <Col xs={12} sm={4} md={4}>
         <About />
       </Col>
     </Col>
     <Col xs={12} sm={4} />
-    <Col xs={12} sm={4} />
+    <Col xs={12} sm={4} id="header-username">{user}</Col>
   </Row>
-
 )

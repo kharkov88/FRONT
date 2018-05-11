@@ -2,8 +2,8 @@ import React from 'react'
 import { Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock, ProgressBar } from 'react-bootstrap'
 
 export class Login extends React.Component {
-  constructor (props, context) {
-    super(props, context)
+  constructor (props) {
+    super(props)
 
     this.handleChange = this.handleChange.bind(this)
     this.handleSubmit = this.handleSubmit.bind(this)
@@ -12,8 +12,7 @@ export class Login extends React.Component {
       value: '',
       disabled: true,
       progress: false,
-      now: 0,
-      logined: false
+      now: 0
     }
   }
 
@@ -43,9 +42,11 @@ export class Login extends React.Component {
 	  		if (this.state.now > 99) {
 	  			setTimeout(() => {
 		  			this.setState({
-		  				progress: false,
-		  				logined: true
+		  				progress: false
 		  			})
+            this.props.changeLoginState(this.state.value)
+            window.localStorage.user = this.state.value
+            window.localStorage.logined = true
 	  			}, 1000)
 	  		}
 	  	}, 100 + now)
@@ -55,28 +56,24 @@ export class Login extends React.Component {
 
   render () {
     return (
-    	!this.state.logined
+    	!this.props.logined
 	    	? !this.state.progress
 	    	? <Col xs={12} sm={12} id='content-login'>
             <form>
-    <FormGroup
-                controlId='formBasicText'
-                validationState={this.getValidationState()}
-		        >
+              <FormGroup controlId='formBasicText' validationState={this.getValidationState()}>
                 <FormControl
-        type='text'
-        value={this.state.value}
-        placeholder='Enter name'
-        onChange={this.handleChange}
-		          />
+                  type='text'
+                  value={this.state.value}
+                  placeholder='Enter name'
+                  onChange={this.handleChange}
+          		  />
                 <FormControl.Feedback />
               </FormGroup>
-    <Button type='submit' bsStyle='info' disabled={this.state.disabled} onClick={this.handleSubmit}>Login</Button>
-  </form>
-</Col>
-		    : <ProgressBar active bsStyle='info' now={this.state.now} label={`${this.state.now}%`} srOnly />
-
-    	: <div>Success!</div>
+              <Button type='submit' bsStyle='info' disabled={this.state.disabled} onClick={this.handleSubmit}>Login</Button>
+            </form>
+          </Col>
+		    : <ProgressBar active style={{height: '5px'}} bsStyle='info' now={this.state.now} label={`${this.state.now}%`} srOnly />
+    	: <div>Login successful!</div>
     )
   }
 }

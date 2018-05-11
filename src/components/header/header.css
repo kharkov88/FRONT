@@ -1,7 +1,7 @@
 #header {
-  background-color: #222;
-  padding: 20px;
-  color: white;
+	background-color: #222;
+	padding: 20px;
+	color: white;
 }
 #header div{
 	text-align: center;
@@ -17,4 +17,7 @@
 	width: 200px;
 	display: flex;
 	justify-content: space-around;;
+}
+#header-username {
+	padding-top: 7px;
 }

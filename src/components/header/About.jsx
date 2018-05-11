@@ -39,9 +39,11 @@ export class About extends React.Component {
 
     return (
       <div>
-        <Link to='/about'>
-          <Glyphicon glyph='align-justify' onClick={this.handleShow} />
-        </Link>
+        <Button bsStyle='link'>
+          <Link to='/about'>
+            <Glyphicon glyph='align-justify' onClick={this.handleShow} />
+          </Link>
+        </Button>
         <Modal show={this.state.show} onHide={this.handleClose}>
           <Modal.Header closeButton>
             <Modal.Title>Modal heading</Modal.Title>

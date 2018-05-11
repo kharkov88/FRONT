@@ -1,11 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import { Glyphicon } from 'react-bootstrap'
+import { Glyphicon, Button } from 'react-bootstrap'
 
 const Home = () => (
-  <Link to='/'>
-    <Glyphicon glyph='home' />
-  </Link>
+  <Button bsStyle='link'>
+    <Link to='/'>
+      <Glyphicon glyph='home' />
+    </Link>
+  </Button>
 )
 
 export default Home

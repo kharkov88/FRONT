@@ -6,9 +6,11 @@ import { Route } from 'react-router-dom'
 import { Login } from './Login'
 import { Chatroom } from './Chatroom'
 
-export const Content = () => (
+export const Content = ({logined, changeLoginState}) => (
   <Row className='show-grid'>
-    <Route exact path='/' component={Login} />
+    <Route exact path='/' render={props => (
+      <Login logined={logined} changeLoginState={changeLoginState} />
+    )} />
     <Route exact path='/chat' component={Chatroom} />
   </Row>
 )
