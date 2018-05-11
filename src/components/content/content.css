@@ -2,11 +2,25 @@
 	padding-top: 50%;
 	text-align: center;
 }
-#chatroom > div{
-	height: 300px;
-	border: 1px solid red;
+#content-people > div{
+	padding: 25px 0 0 0;
+	text-align: center;
 }
+
 #content-login form {
 	width: 50%;
 	margin: 0 auto;
+}
+#content-people-about h2 {
+	text-align: center;
+}
+#content-people-face {
+	margin-top: 20px;
+	text-align: center;
+}
+#content-people-send-message {
+	width: 100%;
+	height: 150px;
+	border-radius: 7px;
+	margin: 15px auto;
 }

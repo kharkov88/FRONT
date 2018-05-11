@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Col, Button, FormGroup, ControlLabel, FormControl, HelpBlock, ProgressBar } from 'react-bootstrap'
+import { Col, Button, FormGroup, FormControl, ProgressBar } from 'react-bootstrap'
 
 export class Login extends React.Component {
   constructor (props) {
@@ -20,7 +20,7 @@ export class Login extends React.Component {
     const length = this.state.value.length
     if (length >= 4) {
     	return 'success'
-    } else if (length != 0 && length < 4) return 'warning'
+    } else if (length !== 0 && length < 4) return 'warning'
     return null
   }
 
